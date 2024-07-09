@@ -39,13 +39,17 @@ jobs:
       - name: Check artifact size
         run: du -sh ./public
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Upload artifact for deployment
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-deploy
+
+    steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
