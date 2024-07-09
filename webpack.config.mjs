@@ -11,6 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const isProduction = process.env.NODE_ENV === 'production';
+const publicPath = process.env.PUBLIC_PATH || '/';
 
 export default {
   mode: isProduction ? 'production' : 'development',
@@ -18,7 +19,7 @@ export default {
   output: {
     filename: isProduction ? 'bundle.[name].[contenthash].js' : 'bundle.[name].js',
     path: path.resolve(__dirname, 'public/js'),
-    publicPath: '/wasm-clang/js/'  // Mettez à jour le publicPath pour correspondre à l'URL GitHub Pages
+    publicPath: publicPath  // Utiliser la variable d'environnement pour configurer publicPath
   },
   resolve: {
     alias: {
