@@ -2,7 +2,6 @@ import { wrap, proxy } from 'comlink';
 import EventEmitter from 'events';
 import { TimeoutError, AbortError } from './errors.js';
 
-
 class CodeRunner extends EventEmitter {
   constructor(options = {}) {
     super();
