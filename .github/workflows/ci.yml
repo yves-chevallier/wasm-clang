@@ -3,7 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Déclenche le workflow sur les pushes vers la branche main
+      - main
+
+permissions:
+  id-token: write
+  contents: write
 
 jobs:
   build:
@@ -16,14 +20,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Utiliser Node.js version 18
+          node-version: '18'
 
       - name: Install dependencies
         run: yarn install
 
       - name: Build project
         env:
-          PUBLIC_PATH: '/wasm-clang/js/'  # Définir le publicPath correct pour GitHub Pages
+          PUBLIC_PATH: '/wasm-clang/js/'
         run: yarn build
 
       - name: Configure Git
@@ -34,5 +38,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public  # Répertoire à publier
