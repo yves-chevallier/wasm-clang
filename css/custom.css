@@ -1,0 +1,357 @@
+body {
+  background-color: #ffffff;
+}
+main {
+  padding: 20px;
+}
+.main-container {
+  max-width: 700px !important;
+  margin: 0 auto;
+}
+#monaco-editor {
+  width: 100%;
+  height: 100px; /* Ajustez cette hauteur selon vos besoins */
+  border: 0px;
+}
+
+.monaco-editor {
+  outline-style: none !important;
+  margin-top: 1em;
+}
+.monaco-editor .monaco-editor-background {
+  background: transparent !important;
+}
+
+.monaco-editor .inputarea.ime-input {
+  background: transparent !important;
+}
+
+.monaco-editor .margin {
+  background: transparent !important;
+}
+
+.bordered-card {
+  border: 1px solid #64b5f6; /* Couleur de la bordure (bleu clair) */
+  background-color: #ffffff; /* Couleur de fond blanche pour la carte */
+  padding: 0; /* Supprimer le padding par défaut */
+}
+
+.card-title {
+  padding: 10px;
+  background-color: #64b5f6; /* Fond de couleur bleu clair pour le titre */
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 20px; /* Ajustez le padding selon vos besoins */
+}
+
+.checkbox-wrapper-46 input[type='checkbox'] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox-wrapper-46 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-46 .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #506eec;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.checkbox-wrapper-46 .cbx span:last-child {
+  padding-left: 8px;
+}
+
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+  border-color: #506eec;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+  background: #506eec;
+  border-color: #506eec;
+  animation: wave-46 0.4s ease;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.checkbox-wrapper-44 input[type='checkbox'] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-44 *,
+.checkbox-wrapper-44 *::before,
+.checkbox-wrapper-44 *::after {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-44 .toggleButton {
+  cursor: pointer;
+  display: block;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.14s ease;
+}
+.checkbox-wrapper-44 .toggleButton:active {
+  transform: rotateX(30deg);
+}
+.checkbox-wrapper-44 .toggleButton input + div {
+  border: 3px solid rgba(54, 145, 19, 0.719);
+  border-radius: 50%;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.checkbox-wrapper-44 .toggleButton input + div svg {
+  fill: none;
+  stroke-width: 3.6;
+  stroke: #383838ce;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: 1;
+  stroke-dashoffset: 124.6;
+  stroke-dasharray: 0 162.6 133 29.6;
+  transition: all 0.4s ease 0s;
+}
+.checkbox-wrapper-44 .toggleButton input + div:before,
+.checkbox-wrapper-44 .toggleButton input + div:after {
+  content: '';
+  width: 3px;
+  height: 16px;
+  background: #e22a2a;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 5px;
+}
+.checkbox-wrapper-44 .toggleButton input + div:before {
+  opacity: 0;
+  transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+  -webkit-animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+  animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+}
+.checkbox-wrapper-44 .toggleButton input + div:after {
+  opacity: 0;
+  transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+  -webkit-animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+  animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+}
+.checkbox-wrapper-44 .toggleButton input:checked + div svg {
+  stroke-dashoffset: 162.6;
+  stroke-dasharray: 0 162.6 28 134.6;
+  transition: all 0.4s ease 0.2s;
+}
+.checkbox-wrapper-44 .toggleButton input:checked + div:before {
+  opacity: 0;
+  transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+  -webkit-animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+  animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+}
+.checkbox-wrapper-44 .toggleButton input:checked + div:after {
+  opacity: 0;
+  transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+  -webkit-animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+  animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+}
+
+@-webkit-keyframes bounceInBefore-44 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes bounceInBefore-44 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(45deg);
+  }
+}
+@-webkit-keyframes bounceInAfter-44 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+  }
+}
+@keyframes bounceInAfter-44 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+  }
+}
+@-webkit-keyframes bounceInBeforeDont-44 {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+  }
+}
+@keyframes bounceInBeforeDont-44 {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+  }
+}
+@-webkit-keyframes bounceInAfterDont-44 {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+  }
+}
+@keyframes bounceInAfterDont-44 {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+#terminal {
+  overflow: hidden; /* Masquer la barre de défilement */
+  border-radius: 10px !important; /* Bords arrondis */
+  margin: 1em;
+  box-sizing: border-box;
+}
+.xterm {
+  overflow: hidden;
+  padding: 1em;
+}
+
+.xterm-viewport {
+  overflow: hidden;
+  overflow-y: hidden !important;
+}
+
+.xterm .xterm-scroll-area {
+  visibility: hidden;
+}
