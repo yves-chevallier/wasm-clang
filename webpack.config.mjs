@@ -18,7 +18,7 @@ export default {
   output: {
     filename: isProduction ? 'bundle.[name].[contenthash].js' : 'bundle.[name].js',
     path: path.resolve(__dirname, 'public/js'),
-    publicPath: '/js/'
+    publicPath: '/wasm-clang/js/'  // Mettez à jour le publicPath pour correspondre à l'URL GitHub Pages
   },
   resolve: {
     alias: {
